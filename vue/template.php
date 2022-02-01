@@ -7,8 +7,18 @@
     <title>Controler donnees</title>
 </head>
 <body>
-    <h1>Formulaire UPLOAD</h1>
-    <br>
-    <?php include('formUpload.php');?>
+<?php
+$loc = filter_input(INPUT_GET,'loc');
+
+switch ($loc) {
+    // TP upload file
+    case 'home':
+        include('vue/home.php');
+        break;
+    default:
+        include('vue/formUpload.php');
+        break;
+}
+?>
 </body>
 </html>
