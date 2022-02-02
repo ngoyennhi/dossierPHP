@@ -3,7 +3,6 @@
 
 // pour appeller une ficher PHP, on utilise fonction include()
 include('vue/template.php');
-//dowload;
-include('vue/formDownload.php');
+
 ?>
  

@@ -6,6 +6,10 @@ switch ($loc) {
     case 'formUpload':
         $path = 'vue/formUpload.php';
         break;
+    // TP download file
+    case 'formDownload':
+        $path = 'vue/formDownload.php';
+        break;
     default:
         $path = 'vue/home.php';
         break;
@@ -21,6 +25,9 @@ switch ($loc) {
 </head>
 <body>
     <?php include($path);?>
-    <a href="index.php?loc=formUpload">upload</a>
+    <a href="index.php?loc=formUpload">TP Upload</a>
+    <br>
+    <a href="index.php?loc=formDownload">TP Download</a>
+
 </body>
 </html>
