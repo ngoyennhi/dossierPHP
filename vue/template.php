@@ -1,3 +1,16 @@
+<?php
+$loc = filter_input(INPUT_GET,'loc');
+$path = '';
+switch ($loc) {
+    // TP upload file
+    case 'formUpload':
+        $path = 'vue/formUpload.php';
+        break;
+    default:
+        $path = 'vue/home.php';
+        break;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,18 +20,7 @@
     <title>Controler donnees</title>
 </head>
 <body>
-<?php
-$loc = filter_input(INPUT_GET,'loc');
-
-switch ($loc) {
-    // TP upload file
-    case 'home':
-        include('vue/home.php');
-        break;
-    default:
-        include('vue/formUpload.php');
-        break;
-}
-?>
+    <?php include($path);?>
+    <a href="index.php?loc=formUpload">upload</a>
 </body>
 </html>
